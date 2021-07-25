@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Deno main-deno-cli.ts",
+      "type": "pwa-node",
+      "request": "launch",
+      "outputCapture": "std",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": [
+        "run",
+        "--no-check",
+        "--inspect-brk",
+        "-A",
+        "main-deno-cli.ts"
+      ],
+      "attachSimplePort": 9229
+    },
+    {
+      "name": "Deno (Attach)",
+      "type": "node",
+      "request": "attach",
+      "port": 9229
+    }
+  ]
+}
