@@ -24,9 +24,16 @@ export async function getTags(registryToken: RegistryToken, repositoryName: Repo
     filtered = registryTagListResponse.tags.filter(tag => regexp.test(tag));
   }
 
+  const sorted = filtered.sort(function(a, b) {
+    return a.localeCompare(b, undefined, {
+      numeric: true,
+      sensitivity: 'base'
+    });
+  });
+
   return {
     'repository': repositoryName,
-    'tags': filtered,
+    'tags': sorted,
   } 
 }
 

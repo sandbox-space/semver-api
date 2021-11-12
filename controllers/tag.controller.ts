@@ -22,6 +22,22 @@ const list = [
   }
 ];
 
+const newest = [
+  jwtGuard(),
+  async (context: MiddlewareContext) => {
+    const params = helpers.getQuery(context, { mergeParams: true }) as TagRequestParams;
+    const { repository, filter } = params;
+
+    console.log('Newest route');
+
+    const registryToken = await authCreateToken([repository]);
+    let tags = await repositoryGetTags(registryToken, repository, filter);
+    tags['tags'] = tags['tags'].slice(-1);
+
+    context.response.body = tags;
+  }
+];
+
 const missing = [
   jwtGuard(),
   async (context: MiddlewareContext) => {
@@ -46,4 +62,4 @@ const missing = [
   }
 ];
 
-export { list, missing };
+export { list, newest, missing };

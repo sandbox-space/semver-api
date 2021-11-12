@@ -18,7 +18,12 @@ const JWT_SECRET = Deno.env.get('JWT_SECRET') as string;
 
 const payload = {
   repository: [
-    "tomaskubat/php-prod",
+    "sandboxspace/php-prod",
+    "sandboxspace/php-dev",
+    "sandboxspace/nginx-prod",
+    "sandboxspace/nginx-dev",
+    "sandboxspace/mariadb-prod",
+    "sandboxspace/mariadb-dev",
     "library/php",
   ]
 };
