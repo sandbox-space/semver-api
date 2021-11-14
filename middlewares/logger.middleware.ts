@@ -8,7 +8,7 @@ const loggerMiddleware = (): Middleware => {
     const reqId = context.response.headers.get("X-Response-Id");
     const status = context.response.status;
     console.log(
-      `${reqId} ${context.request.method} ${context.request.url} - ${reqTime} status: ${status}`,
+      `${reqId}@${context.request.ip} ${context.request.method} ${context.request.url} - ${reqTime} status: ${status}`,
     );
   }
 };
