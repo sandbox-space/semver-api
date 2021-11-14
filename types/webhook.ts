@@ -1,4 +1,7 @@
 export type DockerHubWebhook = {
+  push_data: {
+    tag: string,
+  },
   repository: {
     name: string,
     namespace: string,
