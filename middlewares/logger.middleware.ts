@@ -1,4 +1,4 @@
-import { Middleware } from "https://deno.land/x/oak@v7.5.0/mod.ts";
+import { Middleware } from "../deps.ts";
 import { MiddlewareContext } from "./../types.ts";
 
 const loggerMiddleware = (): Middleware => {

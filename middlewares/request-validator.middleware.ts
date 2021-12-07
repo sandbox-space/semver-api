@@ -1,9 +1,5 @@
-import {
-  validate,
-  ValidationErrors,
-  ValidationRules,
-} from "https://deno.land/x/validasaur@v0.15.0/mod.ts";
-import { httpErrors } from "https://deno.land/x/oak@v7.5.0/mod.ts";
+import { validate, ValidationErrors, ValidationRules } from "../deps.ts";
+import { httpErrors } from "../deps.ts";
 import { MiddlewareContext } from "./../types.ts";
 
 /**

@@ -1,6 +1,6 @@
-import { Middleware } from "https://deno.land/x/oak@v7.5.0/mod.ts";
+import { Middleware } from "../deps.ts";
+import { uuid } from "../deps.ts";
 import { MiddlewareContext } from "./../types.ts";
-import { v4 as uuid } from "https://deno.land/std@0.102.0/uuid/mod.ts";
 
 const requestIdMiddleware = (): Middleware => {
   return async (context: MiddlewareContext, next: () => Promise<unknown>) => {

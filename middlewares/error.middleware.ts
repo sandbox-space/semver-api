@@ -1,4 +1,4 @@
-import { isHttpError, Status, Middleware } from "https://deno.land/x/oak@v7.5.0/mod.ts";
+import { isHttpError, Status, Middleware } from "../deps.ts";
 import { MiddlewareContext } from "./../types.ts";
 
 const errorMiddleware = (): Middleware => {

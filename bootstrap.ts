@@ -1,7 +1,7 @@
-import { Application } from "https://deno.land/x/oak@v7.5.0/mod.ts";
-import { config } from "https://deno.land/x/dotenv@v2.0.0/mod.ts";
-import { oakCors } from "https://deno.land/x/cors/mod.ts";
-import { fsExistsSync } from "https://raw.githubusercontent.com/sandbox-space/deno-helpers/main/mod.ts";
+import { Application } from "./deps.ts";
+import { config } from "./deps.ts";
+import { oakCors } from "./deps.ts";
+import { fsExistsSync } from "./deps.ts";
 import { router } from "./router.ts"
 import { MiddlewareContext } from "./types.ts"
 import * as middlewares from "./middlewares.ts"

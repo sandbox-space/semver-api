@@ -1,4 +1,3 @@
-import { RouterMiddleware } from "https://deno.land/x/oak@v7.5.0/mod.ts";
 import { MiddlewareContext } from "./../types.ts"
 import { router } from "./../router.ts"
 

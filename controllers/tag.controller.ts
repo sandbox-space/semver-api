@@ -1,4 +1,4 @@
-import { helpers, httpErrors } from "https://deno.land/x/oak@v7.5.0/mod.ts";
+import { helpers } from "../deps.ts";
 import { MiddlewareContext, TagRequestParams } from "../types.ts"
 import { createToken as authCreateToken } from "../services/auth.service.ts"
 import { jwtGuard } from "../middlewares/jwt-guard.middleware.ts"

@@ -1,5 +1,5 @@
-import { required, isString, validateObject } from "https://deno.land/x/validasaur@v0.15.0/src/rules.ts";
-import { sendSlackMessage } from "https://raw.githubusercontent.com/sandbox-space/deno-helpers/main/mod.ts";
+import { required, isString, validateObject } from "../deps.ts";
+import { sendSlackMessage } from "../deps.ts";
 import { MiddlewareContext, DockerHubWebhook } from "./../types.ts"
 import { requestValidator } from "../middlewares/request-validator.middleware.ts";
 

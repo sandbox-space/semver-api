@@ -1,5 +1,5 @@
-import { httpErrors, Middleware, Context } from "https://deno.land/x/oak@v7.5.0/mod.ts";
-import { verify } from "https://deno.land/x/djwt@v2.2/mod.ts"
+import { httpErrors, Middleware } from "../deps.ts";
+import { verify } from "../deps.ts"
 import { MiddlewareContext, AuthRepository } from "./../types.ts";
 import { JwtHeader } from "../config/jwt.config.ts" 
 

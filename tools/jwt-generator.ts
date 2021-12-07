@@ -1,7 +1,7 @@
-import { dirname, fromFileUrl } from "https://deno.land/std@0.100.0/path/mod.ts";
-import { create, verify, decode } from "https://deno.land/x/djwt@v2.2/mod.ts"
-import { config } from "https://deno.land/x/dotenv@v2.0.0/mod.ts";
-import { fsExistsSync } from "https://raw.githubusercontent.com/sandbox-space/deno-helpers/main/mod.ts";
+import { dirname, fromFileUrl } from "../deps.ts";
+import { create, verify } from "../deps.ts"
+import { config } from "../deps.ts";
+import { fsExistsSync } from "../deps.ts";
 import { JwtHeader } from "../config/jwt.config.ts" 
 
 const scriptDir = fromFileUrl(dirname(import.meta.url));
@@ -25,6 +25,9 @@ const payload = {
     "sandboxspace/mariadb-prod",
     "sandboxspace/mariadb-dev",
     "library/php",
+    "library/mariadb",
+    "library/nginx",
+    "library/alpine",
   ]
 };
 

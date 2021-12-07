@@ -1,4 +1,4 @@
-import { Context as OakContext } from "https://deno.land/x/oak@v7.5.0/mod.ts";
+import { Context as OakContext } from "../deps.ts";
 import { AuthRepository } from "./auth-repository.ts";
 
 /**

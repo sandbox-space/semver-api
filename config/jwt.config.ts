@@ -1,4 +1,4 @@
-import { Header } from "https://deno.land/x/djwt@v2.2/mod.ts"
+import { Header } from "../deps.ts"
 
 export const JwtHeader: Header = {
   alg: "HS512",
