@@ -1,5 +1,5 @@
 import { Middleware } from "../deps.ts";
-import { MiddlewareContext } from "./../types.ts";
+import { MiddlewareContext } from "../types.ts";
 
 const timingMiddleware = (): Middleware => {
   return async (context: MiddlewareContext, next: () => Promise<unknown>) => {

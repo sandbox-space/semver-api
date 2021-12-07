@@ -1,5 +1,5 @@
-import { MiddlewareContext } from "./../types.ts"
-import { router } from "./../router.ts"
+import { MiddlewareContext } from "../types.ts"
+import { router } from "../router.ts"
 
 const hp = [
   (context: MiddlewareContext) => {

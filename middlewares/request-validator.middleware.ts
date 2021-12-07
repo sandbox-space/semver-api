@@ -1,6 +1,6 @@
 import { validate, ValidationErrors, ValidationRules } from "../deps.ts";
 import { httpErrors } from "../deps.ts";
-import { MiddlewareContext } from "./../types.ts";
+import { MiddlewareContext } from "../types.ts";
 
 /**
  * get single error message from errors

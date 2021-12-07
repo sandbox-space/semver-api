@@ -1,5 +1,5 @@
 import { isHttpError, Status, Middleware } from "../deps.ts";
-import { MiddlewareContext } from "./../types.ts";
+import { MiddlewareContext } from "../types.ts";
 
 const errorMiddleware = (): Middleware => {
   return async (context: MiddlewareContext, next: () => Promise<unknown>) => {

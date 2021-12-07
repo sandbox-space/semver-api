@@ -14,8 +14,6 @@ if (fsExistsSync(envFile)) {
   });
 }
 
-const JWT_SECRET = Deno.env.get('JWT_SECRET') as string;
-
 const payload = {
   repository: [
     "sandboxspace/php-prod",
@@ -31,14 +29,26 @@ const payload = {
   ]
 };
 
-const token = await create(JwtHeader, payload, JWT_SECRET)
+const JWT_SECRET = Deno.env.get('JWT_SECRET') as string;
+const encoder = new TextEncoder()
+const secretBuffer = encoder.encode(JWT_SECRET);
+const key = await crypto.subtle.importKey(
+  "raw",
+  secretBuffer,
+  { name: "HMAC", hash: "SHA-512" },
+  true,
+  ["sign", "verify"],
+);
+
+const token = await create(JwtHeader, payload, key)
 
 try {
-  const payloadDecoded = await verify(token, JWT_SECRET, JwtHeader.alg);
+  const payloadDecoded = await verify(token, key);
   console.log("Payload:");
   console.log(payloadDecoded);
   console.log("Token:");
   console.log(`---> ${token} <---`);
+  console.log(key);
 } catch (error) {
   console.error(error.toString());
   Deno.exit(1);

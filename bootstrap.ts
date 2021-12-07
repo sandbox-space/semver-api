@@ -10,7 +10,7 @@ if (fsExistsSync('.env')) {
   config({ export: true });
 }
 
-const app = new Application<MiddlewareContext>();
+const app = new Application();
 app.use(oakCors());
 app.use(middlewares.loggerMiddleware());
 app.use(middlewares.timingMiddleware());

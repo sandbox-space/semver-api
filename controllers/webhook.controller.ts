@@ -1,6 +1,6 @@
 import { required, isString, validateObject } from "../deps.ts";
 import { sendSlackMessage } from "../deps.ts";
-import { MiddlewareContext, DockerHubWebhook } from "./../types.ts"
+import { MiddlewareContext, DockerHubWebhook } from "../types.ts"
 import { requestValidator } from "../middlewares/request-validator.middleware.ts";
 
 /** 

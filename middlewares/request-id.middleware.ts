@@ -1,6 +1,6 @@
 import { Middleware } from "../deps.ts";
 import { uuid } from "../deps.ts";
-import { MiddlewareContext } from "./../types.ts";
+import { MiddlewareContext } from "../types.ts";
 
 const requestIdMiddleware = (): Middleware => {
   return async (context: MiddlewareContext, next: () => Promise<unknown>) => {

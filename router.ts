@@ -1,4 +1,4 @@
-import { Router } from "https://deno.land/x/oak@v7.5.0/mod.ts";
+import { Router } from "./deps.ts";
 import * as hp from  "./controllers/hp.controller.ts";
 import * as tag from  "./controllers/tag.controller.ts";
 import * as webhook from  "./controllers/webhook.controller.ts";
