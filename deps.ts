@@ -1,5 +1,5 @@
-export { Application, Context, Router, isHttpError, Status, httpErrors, helpers } from "https://deno.land/x/oak@v10.0.0/mod.ts";
-export type { RouterMiddleware, Middleware } from "https://deno.land/x/oak@v10.0.0/mod.ts";
+export { Application, Context, Router, isHttpError, Status, httpErrors, helpers } from "https://deno.land/x/oak@v10.1.0/mod.ts";
+export type { RouterMiddleware, Middleware } from "https://deno.land/x/oak@v10.1.0/mod.ts";
 
 export { create, verify } from "https://deno.land/x/djwt@v2.4/mod.ts"
 export type { Header } from "https://deno.land/x/djwt@v2.4/mod.ts"
