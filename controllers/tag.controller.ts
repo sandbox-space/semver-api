@@ -16,7 +16,8 @@ const list = [
     console.log('List route');
 
     const registryToken = await authCreateToken([repository]);
-    const tags = await repositoryGetTags(registryToken, repository, filter);
+    let tags = await repositoryGetTags(registryToken, repository, filter);
+    tags['tags'] = tags['tags'].slice(-5);
 
     context.response.body = tags;
   }
