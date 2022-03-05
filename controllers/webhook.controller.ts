@@ -8,9 +8,10 @@ import { requestValidator } from "../middlewares/request-validator.middleware.ts
  * for user create/update 
  * */
 const validatorProxySchema = {
+  push_data: validateObject(true, {
+    tag: [required, isString],
+  }),
   repository: validateObject(true, {
-    name: [required, isString],
-    namespace: [required, isString],
     repo_name: [required, isString],
   }),
   callback_url: [required, isString],

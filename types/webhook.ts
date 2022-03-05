@@ -3,8 +3,6 @@ export type DockerHubWebhook = {
     tag: string,
   },
   repository: {
-    name: string,
-    namespace: string,
     repo_name: string,
   },
   callback_url: string,
