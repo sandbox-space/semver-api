@@ -20,6 +20,7 @@ const proxy = [
   requestValidator({ bodyRules: validatorProxySchema }),
   async (context: MiddlewareContext) => {
     const requestBody = await context.request.body().value as DockerHubWebhook;
+    console.log(requestBody);
 
     const SLACK_WEBHOOK_URL = Deno.env.get('SLACK_WEBHOOK_URL') as string;
     console.log(SLACK_WEBHOOK_URL);
